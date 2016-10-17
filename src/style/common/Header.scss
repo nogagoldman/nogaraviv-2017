@@ -1,0 +1,46 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Header {
+
+    background-color: $noga_pink;
+
+    width: 100%;
+
+    padding: 75px 20px 150px;
+
+    > .links {
+        max-width: 1140px;
+
+        display: flex;
+        align-items: center;
+        margin: auto;
+
+        > p {
+            font-family: 'InputMono';
+            font-size: 16px;
+        }
+
+        > .name {
+            flex: 1;
+        }
+
+        > .work {
+            margin-right: 50px;
+        }
+
+        > .work.selected, 
+        > .contact.selected {
+            font-weight: bold;
+        }
+
+    }
+
+    animation: #{$fp}Header 1s ease;
+
+}
+
+@keyframes #{$fp}Header {
+    from {transform: translateY(-25px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}

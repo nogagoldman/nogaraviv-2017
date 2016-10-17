@@ -1,0 +1,18 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}DecoratedButton {
+    
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+
+    > .line {
+        flex: 1;
+        height: 2px;
+        background-color: $noga_black;
+        margin: 1px;
+    }
+
+}

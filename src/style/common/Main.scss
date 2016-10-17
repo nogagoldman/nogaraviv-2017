@@ -1,0 +1,10 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Main {
+
+    flex: 1;
+
+    background-color: $noga_background;
+
+}

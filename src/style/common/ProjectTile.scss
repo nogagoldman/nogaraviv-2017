@@ -1,0 +1,87 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}ProjectTile {
+
+    flex: 1 1 25%;
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    > .overlay {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        top: 0px;
+        left: 0px;
+
+        background-color: $noga_black;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        animation: #{$fp}ProjectTile-overlay-out 400ms;
+        animation-fill-mode: forwards;
+
+        > h3 {
+            color: $noga_white;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        > h6 {
+            color: $noga_white;
+            text-align: center;
+        }
+
+        &:hover {
+            animation: #{$fp}ProjectTile-overlay-in 400ms;
+            animation-fill-mode: forwards;
+        }
+
+    }
+
+    > img {
+        width: 100%;
+        height: auto;
+    }
+
+    &.i0, &.i1, &.i3, &.i4 {
+        margin-right: 40px;
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+.#{$fp}ProjectTile {
+
+    flex: 1 1 40%;
+
+    &.i0, &.i2, &.i4 {
+        margin-right: 20px;
+    }
+
+    &.i1, &.i3 {
+        margin-right: 0px;
+    }
+}
+}
+
+@keyframes #{$fp}ProjectTile-overlay-in {
+    from {opacity: 0;}
+    to {opacity: 0.95;}
+}
+
+@keyframes #{$fp}ProjectTile-overlay-out {
+    from {opacity: 0.95;}
+    to {opacity: 0;}
+}

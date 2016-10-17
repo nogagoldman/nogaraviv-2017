@@ -1,0 +1,31 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Footer {
+    
+    padding: 64px 0px;
+
+    background-color: $noga_grey;
+
+    animation: #{$fp}Footer 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+    > h5 {
+        max-width: 680px;
+        margin: 0px auto 40px;
+        text-align: center;
+
+        > a {text-decoration: underline;}
+    }
+
+    > .common_SocialBar {
+        margin: auto;
+    }
+
+}
+
+@keyframes #{$fp}Footer {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

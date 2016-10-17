@@ -1,0 +1,71 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Project {
+    
+    flex: 1 1 40%;
+
+    display: inline-block;
+
+    margin-top: 40px;
+
+    cursor: pointer;
+
+    position: relative;
+
+    > img {
+        width: 100%;
+        height: auto;
+    }
+
+    > .overlay {
+        position: absolute;
+
+        width: 100%;
+        height: 100%;
+
+        top: 0px;
+        left: 0px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        background-color: $noga_black;
+
+        animation: #{$fp}Project-overlay-out 400ms;
+        animation-fill-mode: forwards;
+
+        > h2 {margin-bottom: 15px; color: $noga_white;}
+
+        > h6 {text-align: center; color: $noga_white;}
+
+        &:hover {
+            animation: #{$fp}Project-overlay-in 400ms;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    &.mod0 {margin-right: 40px;}
+}
+
+@media screen and (max-width: 700px) {
+    .#{$fp}Project {
+        flex-basis: 100%;
+
+        margin-top: 20px;
+
+        &.mod0 {margin-right: 0px;}
+    }
+}
+
+@keyframes #{$fp}Project-overlay-in {
+    from {opacity: 0;}
+    to {opacity: 0.95;}
+}
+
+@keyframes #{$fp}Project-overlay-out {
+    from {opacity: 0.95;}
+    to {opacity: 0;}
+}

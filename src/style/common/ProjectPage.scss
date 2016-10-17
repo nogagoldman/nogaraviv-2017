@@ -1,0 +1,49 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.title, .#{$fp}ProjectPage {
+    animation: #{$fp}ProjectPage 1s ease 0.5s;
+    animation-fill-mode: forwards;
+    opacity: 0;
+}
+
+.title {
+    transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
+    text-align: center;
+}
+
+.#{$fp}ProjectPage {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    > .title {
+        margin-bottom: 24px;
+    }
+
+    > .roles {
+        margin-bottom: 46px;
+    }
+
+    > .common_ProjectContent {
+        margin-bottom: 80px;
+    }
+
+    > .common_DecoratedButton {
+        max-width: 920px;
+        margin-bottom: 80px;
+    }
+
+    > .common_MoreProjects {
+        margin-bottom: 100px;
+    }
+
+}
+
+@keyframes #{$fp}ProjectPage {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

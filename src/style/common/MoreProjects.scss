@@ -1,0 +1,17 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}MoreProjects {
+    width: 100%;
+    max-width: 920px;
+
+    > h3 {
+        font-weight: bold;
+    }
+
+    > .projects {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+}

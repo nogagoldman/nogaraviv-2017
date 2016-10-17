@@ -1,0 +1,55 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Button {
+
+    display: table;
+
+    padding: 16px 32px;
+
+    border: 2px solid $noga_black;
+    border-radius: 2px;
+
+    cursor: pointer;
+
+    animation: #{$fp}Button-background-out 400ms;
+    animation-fill-mode: forwards;
+
+    > h6 {
+        display: table;
+        animation: #{$fp}Button-color-out 400ms;
+        animation-fill-mode: forwards;
+    }
+
+    &:hover {
+        animation: #{$fp}Button-background-in 400ms;
+        animation-fill-mode: forwards;
+
+        > h6 {
+            display: table;
+            animation: #{$fp}Button-color-in 400ms;
+            animation-fill-mode: forwards;
+        }
+    }
+
+}
+
+@keyframes #{$fp}Button-background-in {
+    from {background-color: rgba($noga_black, 0);}
+    to {background-color: rgba($noga_black, 1);}
+}
+
+@keyframes #{$fp}Button-background-out {
+    from {background-color: rgba($noga_black, 1);}
+    to {background-color: rgba($noga_black, 0);}
+}
+
+@keyframes #{$fp}Button-color-in {
+    from {color: $noga_black;}
+    to {color: $noga_white;}
+}
+
+@keyframes #{$fp}Button-color-out {
+    from {color: $noga_white;}
+    to {color: $noga_black;}
+}

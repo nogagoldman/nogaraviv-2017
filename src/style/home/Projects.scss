@@ -1,0 +1,16 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Projects {
+
+    display: flex;
+
+    flex-wrap: wrap;
+
+    max-width: 970px;
+
+    > .dummy {
+        flex: 1 1 40%;
+    }
+
+}

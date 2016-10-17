@@ -1,0 +1,48 @@
+@import '../_colors';
+@import '_folder_prefix';
+
+.#{$fp}Header {
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: $noga_pink;
+    width: 100%;
+
+    padding: 230px 0px;
+
+    > h4 {
+
+        max-width: 970px;
+
+        text-align: center;
+        margin: 0px 20px 40px;
+
+    }
+
+    > .common_SocialBar {
+        margin: 0px 20px;
+    }
+
+    animation: #{$fp}_animation 1s ease;
+    animation-fill-mode: forwards;
+    opacity: 0;
+
+}
+
+@media screen and (max-width: 450px) {
+.#{$fp}Header {
+
+    padding: 110px 0px;
+
+    > .common_SocialBar {
+        display: none;
+    }
+}
+}
+
+@keyframes #{$fp}_animation {
+    from {transform: translateY(-25px); opacity: 0;}
+    to {transform: translateY(0px); opacity: 1;}
+}
